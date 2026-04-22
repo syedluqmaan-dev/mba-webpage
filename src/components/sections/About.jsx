@@ -56,7 +56,7 @@ function ContactInfo() {
 
 const quickFactsRows = [
   { label: 'Program',   value: 'MBA – 2 Years Full-Time' },
-  { label: 'University', value: 'VMRF (DU)' },
+  { label: 'University', value: 'VMRF - DU' },
   { label: 'Campus',    value: 'Chennai,India' },
   { label: 'Intake',    value: '120 seats / year' },
   { label: 'Approval',  value: 'AICTE Approved' },

@@ -45,7 +45,6 @@ export default function Hero() {
 
           {/* 1 · SCHOOL NAME */}
           <div className="school-block">
-            <span className="school-eyebrow">Est. 2009 &nbsp;·&nbsp; Deemed to be University</span>
             <h2 className="school-name">
               Ganesan School<br />of Business Management
             </h2>

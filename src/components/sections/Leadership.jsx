@@ -30,10 +30,7 @@ const LEADERSHIP = [
     name: 'Ms. Amirthavarshini Ganesan',
     title: 'Co - Patron, GSBM',
     photo: proChancellorImg,
-    message: `As Patron of Ganesan School of Business Management, I am deeply committed to shaping a new generation of business leaders who lead with purpose and integrity.
-With my Economics graduation from the University of Chicago and an MBA from University College London, UK, and experience across healthcare and education, I strongly believe GSBM must blend cutting-edge knowledge with a strong human touch in this AI-driven era.
-Our focus remains on developing ethical decision-makers who prioritize sustainability, real-world impact, and genuine employability.
-Together, let us build business education that not only creates successful professionals but also responsible citizens committed to the greater social good.`,
+    message: `As Patron of Ganesan School of Business Management, I am deeply committed to shaping a new generation of business leaders who lead with purpose and integrity. With my Economics graduation from the University of Chicago and an MBA from University College London, UK, and experience across healthcare and education, I strongly believe GSBM must blend cutting-edge knowledge with a strong human touch in this AI-driven era.Our focus remains on developing ethical decision-makers who prioritize sustainability, real-world impact, and genuine employability.Together, let us build business education that not only creates successful professionals but also responsible citizens committed to the greater social good.`,
   },
   {
     name: 'Mr. J. Suresh Samuel',
@@ -45,9 +42,7 @@ Together, let us build business education that not only creates successful profe
     name: 'Prof P.S. Balaganapathy',
     title: 'Director, GSBM',
     photo: deanImg,
-    message: `At GSBM, we believe education is not just about degrees — it is about shaping the character and capability of future leaders who will drive India's business growth.
-Every student who joins us carries the potential to change industries. We strive to provide a relaxed but disciplined ecosystem for students' all-round development.
-The central focus is to transform students into confident, knowledgeable, and skilled individuals who are not only ready for various jobs but also conditioned to think and create jobs. Employability is the key idea.`,
+    message: `At GSBM, we believe education is not just about degrees — it is about shaping the character and capability of future leaders who will drive India's business growth.Every student who joins us carries the potential to change industries. We strive to provide a relaxed but disciplined ecosystem for students' all-round development.The central focus is to transform students into confident, knowledgeable, and skilled individuals who are not only ready for various jobs but also conditioned to think and create jobs. Employability is the key idea.`,
   },
 ];
 
