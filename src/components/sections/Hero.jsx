@@ -95,7 +95,7 @@ export default function Hero() {
           </div>
 
           {/* 7 · MOBILE LOGOS — shown only on small screens */}
-          <div className="logos-mobile">
+          {/* <div className="logos-mobile">
             <div className="logos-mobile-grid">
               {logos.map((l, i) => (
                 <div className={`logo-pill-sm${l.dark ? ' logo-pill-dark' : ''}`} key={i}>
@@ -103,12 +103,12 @@ export default function Hero() {
                 </div>
               ))}
             </div>
-          </div>
+          </div> */}
 
         </div>{/* /hero-left */}
 
         {/* ════════ RIGHT COLUMN — LOGOS (desktop) ════════ */}
-        <div className="hero-right">
+        {/* <div className="hero-right">
           <div className="logos-stack">
             {logos.map((l, i) => (
               <div
@@ -120,7 +120,7 @@ export default function Hero() {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
 
       </div>{/* /hero-grid-wrap */}
 
