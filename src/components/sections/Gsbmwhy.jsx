@@ -1,7 +1,7 @@
 import { memo } from 'react';
 import { FiZap, FiTarget, FiCpu, FiMic, FiAward, FiUsers } from 'react-icons/fi';
 import SectionHeader from '../ui/SectionHeader';
-import './Whygsbm.css';
+import './Gsbmwhy.css';
 
 const WHY_CARDS = [
   {
@@ -36,7 +36,7 @@ const WHY_CARDS = [
   },
 ];
 
-const Whygsbm = () => {
+const Gsbmwhy = () => {
   return (
     <section className="sec" id="why">
       <div className="W">
@@ -65,4 +65,4 @@ const Whygsbm = () => {
   );
 };
 
-export default memo(Whygsbm);
+export default memo(Gsbmwhy);

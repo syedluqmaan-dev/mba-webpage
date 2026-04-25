@@ -1,8 +1,8 @@
 import { memo } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Ctabanner.css';
+import './Calbutton.css';
 
-const Ctabanner = () => {
+const Calbutton = () => {
   const navigate = useNavigate();
 
   const handleApply = (e) => {
@@ -45,4 +45,4 @@ const Ctabanner = () => {
   );
 };
 
-export default memo(Ctabanner);
+export default memo(Calbutton);

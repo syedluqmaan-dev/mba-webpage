@@ -53,19 +53,19 @@ const MetaTags = memo(({ title, description, url, image }) => {
 });
 MetaTags.displayName = 'MetaTags';
 
-// ─── Lazy sections ───────────────────────────────────────────────────────────
+// ─── Lazy sections (updated imports: Gsbmwhy.jsx, Calbutton.jsx) ────────────
 const Hero       = lazy(() => import('./components/sections/Hero'));
 const LogoStrip  = lazy(() => import('./components/sections/LogoStrip'));
 const About      = lazy(() => import('./components/sections/About'));
 const Leadership = lazy(() => import('./components/sections/Leadership'));
 const Programs   = lazy(() => import('./components/sections/Programs'));
-const Whygsbm = lazy(() => import('./components/sections/whygsbm.jsx'));
+const Gsbmwhy    = lazy(() => import('./components/sections/Gsbmwhy.jsx'));     // ✅ new file
 const Campus     = lazy(() => import('./components/sections/Campus'));
 const Admissions = lazy(() => import('./components/sections/Admissions'));
 const Faculty    = lazy(() => import('./components/sections/Faculty'));
 const Placements = lazy(() => import('./components/sections/Placements'));
 const Contact    = lazy(() => import('./components/sections/Contact'));
-const Ctabanner = lazy(() => import('./components/sections/ctabanner.jsx'));
+const Calbutton  = lazy(() => import('./components/sections/Calbutton.jsx'));   // ✅ new file
 
 // ─── ScrollToTop ─────────────────────────────────────────────────────────────
 const ScrollToTop = memo(() => {
@@ -85,7 +85,7 @@ const ScrollToTop = memo(() => {
 });
 ScrollToTop.displayName = 'ScrollToTop';
 
-// ─── HomePage ─────────────────────────────────────────────────────────────────
+// ─── HomePage ────────────────────────────────────────────────────────────────
 const HomePage = () => (
   <main id="main-content" tabIndex={-1}>
     <Suspense fallback={<SectionLoader />}>
@@ -94,18 +94,18 @@ const HomePage = () => (
       <About />
       <Leadership />
       <Programs />
-      <Whygsbm />      {/* ✅ matches import */}
+      <Gsbmwhy />
       <Campus />
       <Admissions />
       <Faculty />
       <Placements />
       <Contact />
-      <Ctabanner />    {/* ✅ matches import */}
+      <Calbutton />
     </Suspense>
   </main>
 );
 
-// ─── ApplyNow page layout ─────────────────────────────────────────────────────
+// ─── ApplyNow page layout ────────────────────────────────────────────────────
 const ApplyPage = () => (
   <>
     <Navbar />

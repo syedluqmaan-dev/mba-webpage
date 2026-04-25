@@ -1,0 +1,92 @@
+/* Gsbmwhy.css – Why Choose GSBM Section */
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 32px;
+}
+
+.why-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--gold);
+  padding: 28px 24px;
+  transition: all 0.25s ease;
+  box-shadow: var(--shadow-sm);
+  will-change: transform;
+}
+
+.why-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-top-color: var(--burgundy);
+}
+
+.why-card-icon {
+  width: 56px;
+  height: 56px;
+  background: var(--burgundy);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  color: var(--gold);
+  transition: background 0.2s;
+}
+
+.why-card:hover .why-card-icon {
+  background: var(--gold);
+  color: var(--navy);
+}
+
+.why-card-title {
+  font-family: var(--serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.why-card-desc {
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--text2);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .why-grid {
+    gap: 20px;
+  }
+  .why-card {
+    padding: 24px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .why-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 540px) {
+  .why-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .why-card {
+    padding: 20px;
+  }
+  .why-card-icon {
+    width: 48px;
+    height: 48px;
+  }
+  .why-card-title {
+    font-size: 1.1rem;
+  }
+}
