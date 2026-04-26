@@ -11,7 +11,7 @@ const NAV_ITEMS = [
   { label: 'Programs', id: 'programs' },
   { label: 'Campus', id: 'campus' },
   { label: 'Admissions', id: 'admissions' },
-{ label: 'Placements', id: 'placements' },
+  { label: 'Placements', id: 'placements' },
   { label: 'Contact', id: 'contact' },
 ];
 
@@ -30,6 +30,13 @@ export default function Navbar() {
     setMobileOpen(false);
     startTransition(() => navigate('/apply'));
   }, [navigate]);
+
+  // ── Logo click → full page refresh back to root ─────────────────────────────
+  const handleLogoClick = useCallback((e) => {
+    e.preventDefault();
+    setMobileOpen(false);
+    window.location.href = '/';   // hard navigate → browser reloads the page
+  }, []);
 
   // ── Scroll detection (RAF-throttled, passive) ───────────────────────────────
   useEffect(() => {
@@ -84,7 +91,7 @@ export default function Navbar() {
     const onKey = (e) => {
       if (e.key === 'Escape' && mobileOpen) {
         setMobileOpen(false);
-        hamRef.current?.focus(); // return focus to trigger
+        hamRef.current?.focus();
       }
     };
     window.addEventListener('keydown', onKey);
@@ -157,11 +164,11 @@ export default function Navbar() {
       <header className={`gsbm-nav${scrolled ? ' gsbm-nav--scrolled' : ''}`}>
         <div className="gsbm-nav-inner">
 
-          {/* Logo — uses imported asset (not hardcoded /src/ path) */}
+          {/* Logo — click refreshes the page */}
           <a
-            href="#home"
+            href="/"
             className="gsbm-logo-wrap"
-            onClick={(e) => handleNavClick(e, 'home')}
+            onClick={handleLogoClick}
             aria-label="GSBM – Go to homepage"
           >
             <img
@@ -231,10 +238,7 @@ export default function Navbar() {
         aria-hidden="true"
       />
 
-      {/* ── Mobile drawer ──────────────────────────────────────────────────
-           - role="dialog" (not "navigation") with aria-modal for screen readers
-           - Focus trap wired above via useEffect
-      ────────────────────────────────────────────────────────────────────── */}
+      {/* ── Mobile drawer ─────────────────────────────────────────────────── */}
       <div
         id="gsbm-drawer"
         ref={drawerRef}
@@ -245,15 +249,18 @@ export default function Navbar() {
         className={`gsbm-drawer${mobileOpen ? ' gsbm-drawer--open' : ''}`}
       >
         <div className="gsbm-drawer-head">
-          <img
-            src={vmrfLogoFull}
-            alt="GSBM"
-            className="gsbm-drawer-logo"
-            width={180}
-            height={64}
-            loading="lazy"
-            decoding="async"
-          />
+          {/* Drawer logo also refreshes */}
+          <a href="/" onClick={handleLogoClick} aria-label="GSBM – Go to homepage">
+            <img
+              src={vmrfLogoFull}
+              alt="GSBM"
+              className="gsbm-drawer-logo"
+              width={180}
+              height={64}
+              loading="lazy"
+              decoding="async"
+            />
+          </a>
           <button
             type="button"
             className="gsbm-drawer-close"

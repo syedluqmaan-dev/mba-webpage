@@ -1,4 +1,8 @@
 import React from "react";
+import giecLogo   from "../../assets/clogos/Giec.jpeg";
+import iicLogo    from "../../assets/clogos/Iic.png";
+import ediiLogo   from "../../assets/clogos/Edii.png";
+import msmeLogo   from "../../assets/clogos/Msme.png";
 
 /* ── GIECSection ──────────────────────────────────────────────────────────────
    Uses your existing index.css variables & utility classes.
@@ -11,19 +15,19 @@ const PARTNERS = [
   {
     id: "iic",
     name: "Institution's Innovation Council",
-    src: "./src/assets/clogos/Iic.png",
+    src: iicLogo,
     alt: "Institution's Innovation Council logo",
   },
   {
     id: "edii",
     name: "EDII-TN",
-    src: "./src/assets/clogos/Edii.png",
+    src: ediiLogo,
     alt: "EDII Tamil Nadu logo",
   },
   {
     id: "msme",
     name: "MSME",
-    src: "./src/assets/clogos/Msme.png",
+    src: msmeLogo,
     alt: "MSME logo",
   },
 ];
@@ -36,7 +40,7 @@ export default function GIECSection() {
         {/* ── GIEC Logo — large, bold, no wordmark ── */}
         <div className="giec-brand fu d1">
           <img
-            src="./src/assets/clogos/Giec.jpeg"
+            src={giecLogo}
             alt="Ganesan Incubation and Entrepreneurship Centre"
             className="giec-logo"
           />
@@ -107,7 +111,7 @@ export default function GIECSection() {
           margin-bottom: 48px;
         }
         .giec-logo {
-          height: 250px;
+          height: 210px;
           width: auto;
           max-width: 420px;
           object-fit: contain;
